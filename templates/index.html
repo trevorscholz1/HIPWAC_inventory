@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab Inventory Search</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="p-4">
+    <h1 class="mb-4">HIPWAC LAB Inventory Search</h1>
+    <form method="POST" class="mb-4">
+      <input
+        type="text"
+        name="query"
+        class="form-control"
+        placeholder="e.g. large mirror"
+        required
+      />
+      <button type="submit" class="btn btn-primary mt-2">Search</button>
+    </form>
+
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %} {% if results %}
+    <h3>Top Matches</h3>
+    <ul class="list-group">
+      {% for item in results %}
+      <li class="list-group-item">
+        <strong>{{ item.name }}</strong> <br />
+        Brand: {{ item.brand }} | Size: {{ item.size }} <br />
+        <span class="badge bg-success">Drybox: {{ item.drybox }}</span>
+        <span class="text-muted float-end">Score: {{ item.score }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </body>
+</html>
