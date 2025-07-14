@@ -20,7 +20,7 @@ sentence-transformers
 
 ---
 
-## Setup Instructions with a venv
+## Setup Instructions with a venv (assuming MacOS)
 
 1.  Open your terminal
 
@@ -34,13 +34,11 @@ sentence-transformers
 
 4.  Activate the virtual environment:
 
-    - On mac:
-
-          source venv/bin/activate
+        source venv/bin/activate
 
 5.  Install dependencies:
 
-    pip install -r requirements.txt
+    pip install -r requirements.txt (should start listing all of the installations, might take a minute)
 
 ---
 
@@ -83,3 +81,4 @@ You'll see the top 5 matches printed in your terminal.
 - This app uses a pre-trained model from SentenceTransformers: 'all-MiniLM-L6-v2'
 - Will continue tp update as we keep cataloging the lab.
 - Let Trevor know of any errors, suggested edits, etc.
+- Right now the search takes a little longer than I want, might experiment with the models from SentenceTransformers
