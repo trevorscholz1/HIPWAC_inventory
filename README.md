@@ -1,15 +1,18 @@
 # HIPWAC Inventory Search
 
-This program is apart of the efforts to catalogue the lab and improve lab organization.
+This program is a part of the efforts to catalogue the lab and improve lab organization.
 It searches the catalogue using natural lanuage to return best matches and point the user to
 which drybox/drawer the item can be found.
+
 You can run it either as a web app or as a command-line tool (see below).
+
+The "Score" next to each result is a score of how well the item matched the search query.
 
 ---
 
 ## Requirements
 
-- Python 3.10+ recommended
+- Python 3.10 (this is just the version I used, really any modern version should work)
 - pip
 
 All required Python packages are listed in requirements.txt:
@@ -26,7 +29,7 @@ sentence-transformers
 
 2.  Navigate to the project folder:
 
-    cd path/to/your/project
+    cd path/to/your/project (For example, for me it is cd Documents/catalogue_search)
 
 3.  Create a virtual environment using Python 3.10:
 
@@ -44,11 +47,14 @@ sentence-transformers
 
 ## Inventory File
 
-Make sure there is a file named inventory.csv in the same folder, I will continue to update the inventory as we make changes to the google sheet.
-
-The columns should be: - object - size - brand - drybox
+I am currently hosting the inventory file instead of having it in this project locally to allow
+for updates to the inventory without having to update the local version of it.
 
 ---
+
+## Activate the venv (if you have not already)
+
+source venv/bin/activate
 
 ## Running the Web App (has a nice UI so recommended)
 
@@ -78,7 +84,7 @@ You'll see the top 5 matches printed in your terminal.
 
 ## Notes
 
-- This app uses a pre-trained model from SentenceTransformers: 'all-MiniLM-L6-v2'
+- I used a pre-trained model from SentenceTransformers: 'all-MiniLM-L6-v2'
 - Will continue tp update as we keep cataloging the lab.
-- Let Trevor know of any errors, suggested edits, etc.
+- Let me know of any errors, suggested edits, etc.
 - Right now the search takes a little longer than I want, might experiment with the models from SentenceTransformers

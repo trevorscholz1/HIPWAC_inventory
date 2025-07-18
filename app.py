@@ -8,7 +8,7 @@ app = Flask(__name__)
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 def load_inventory():
-    df = pd.read_csv('inventory.csv')
+    df = pd.read_csv('https://trevorscholz.dev/nasa9295.csv')
     df.fillna('', inplace=True)
     df['text'] = df[['object','brand','size']].agg(' '.join, axis=1)
     
@@ -72,4 +72,3 @@ if __name__ == '__main__':
 
     else:
         app.run(debug=True)
-        
