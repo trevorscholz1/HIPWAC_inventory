@@ -29,7 +29,7 @@ sentence-transformers
 
 2.  Navigate to the project folder:
 
-    cd path/to/your/project (For example, for me it is cd Documents/catalogue_search)
+    cd path/to/your/project (For example, for me it is cd Documents/HIPWAC_inventory)
 
 3.  Create a virtual environment using Python 3.10:
 
